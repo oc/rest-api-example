@@ -15,7 +15,9 @@ Feature: API
   Scenario: Upload new JSON measure
     Given I have a valid recording:
     """
-    {"name":"jsonRecording"}
+    {
+      "name":"jsonRecording"
+    }
     """
     When I POST the recording as "application/json" to "/measure"
     Then It should return status "200" OK

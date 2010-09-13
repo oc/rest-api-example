@@ -1,6 +1,6 @@
-package no.ntnu.p15;
+package restapi;
 
-import no.ntnu.p15.model.Measure;
+import restapi.model.Measure;
 
 import java.util.HashMap;
 

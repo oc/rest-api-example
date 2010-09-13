@@ -1,12 +1,14 @@
+package restapi.steps;
+
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import cuke4duke.annotation.I18n.EN.Given;
 import cuke4duke.annotation.I18n.EN.Then;
 import cuke4duke.annotation.I18n.EN.When;
-import no.ntnu.p15.DB;
-import no.ntnu.p15.FailedCukeException;
-import no.ntnu.p15.model.Measure;
+import restapi.DB;
+import restapi.FailedCukeException;
+import restapi.model.Measure;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;

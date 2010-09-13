@@ -1,4 +1,4 @@
-package no.ntnu.p15;
+package restapi;
 
 public class FailedCukeException extends RuntimeException {
 }

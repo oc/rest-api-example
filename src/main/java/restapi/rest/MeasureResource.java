@@ -1,7 +1,7 @@
-package no.ntnu.p15.rest;
+package restapi.rest;
 
-import no.ntnu.p15.DB;
-import no.ntnu.p15.model.Measure;
+import restapi.DB;
+import restapi.model.Measure;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;

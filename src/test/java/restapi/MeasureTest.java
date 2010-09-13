@@ -1,11 +1,11 @@
-package no.ntnu.p15;
+package restapi;
 
-import no.ntnu.p15.model.Measure;
+import org.junit.runner.RunWith;
+import restapi.model.Measure;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
-
 
 public class MeasureTest {
 

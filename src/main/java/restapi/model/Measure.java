@@ -1,4 +1,4 @@
-package no.ntnu.p15.model;
+package restapi.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
