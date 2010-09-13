@@ -2,13 +2,11 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import cuke4duke.annotation.I18n.EN.Given;
-import cuke4duke.annotation.I18n.EN.When;
 import cuke4duke.annotation.I18n.EN.Then;
-import cuke4duke.annotation.Pending;
+import cuke4duke.annotation.I18n.EN.When;
 import no.ntnu.p15.DB;
 import no.ntnu.p15.FailedCukeException;
 import no.ntnu.p15.model.Measure;
-import org.hamcrest.Matcher;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
@@ -28,13 +26,11 @@ public class AppSteps {
     public void postRecordingContentTypeToResource(String mime, String resource) {
         Client client = Client.create();
         WebResource webResource = client.resource("http://localhost:8090" + resource);
-        response = webResource.type("application/xml").post(ClientResponse.class, recording);
+        response = webResource.type(mime).post(ClientResponse.class, recording);
     }
 
     @Then("^It should return status \"([^\"]*)\".*?$")
     public void itShouldReturnStatus(String statusCode) {
-        System.out.println("Status:" + response.getStatus());
-        
         if (response.getStatus() != Integer.parseInt(statusCode)) throw new FailedCukeException();
     }
 

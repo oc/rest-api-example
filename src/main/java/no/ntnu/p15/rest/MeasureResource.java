@@ -19,18 +19,13 @@ public class MeasureResource {
     @GET
     @Produces({"application/xml", "application/json"})
     public Measure get(@PathParam("name") String name) {
-        System.out.println("Got GET! for name: " + name);
         return DB.get(name);
     }
 
     @POST
     @Consumes({"application/xml","application/json"})
     public Response post(Measure measure) {
-
-        System.out.println("MEAS:" + measure.getName());
-
         DB.save(measure.getName(), measure);
-
         return Response.ok().build();
     }
 }
